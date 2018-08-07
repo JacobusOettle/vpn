@@ -77,6 +77,9 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			./easyrsa build-client-full $CLIENT nopass
 			# Generates the custom client.ovpn
 			newclient "$CLIENT"
+			#MY EIE KODE
+			cp ~/"$CLIENT.ovpn" /home/"$CLIENT.ovpn"
+			#MY EIE KODE
 			echo
 			echo "Client $CLIENT added, configuration is available at:" ~/"$CLIENT.ovpn"
 			exit
